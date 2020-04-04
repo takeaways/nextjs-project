@@ -15,12 +15,12 @@ export const ContentItemHeader = styled.div`
   background-color: darkblue;
   padding: 0;
   margin: 0;
-  height: 20%;
+  height: 100px;
   width: 100%;
 `;
 
 export const ContentItemBody = styled.div`
-  background-color: red;
-  height: 80%;
+  height: calc(100% - 100px);
   width: 100%;
+  overflow: auto;
 `;

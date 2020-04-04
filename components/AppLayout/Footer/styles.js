@@ -1,6 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 export const FooterBlock = styled.footer`
   width: 100%;
   height: 50px;
-  background-color:darkgreen;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  background-color: gray;
 `;

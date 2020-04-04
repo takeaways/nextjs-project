@@ -70,11 +70,11 @@ var ContentBlock = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div
 var ContentItemHeader = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__ContentItemHeader",
   componentId: "sc-18m1qie-1"
-})(["background-color:darkblue;padding:0;margin:0;height:20%;width:100%;"]);
+})(["background-color:darkblue;padding:0;margin:0;height:100px;width:100%;"]);
 var ContentItemBody = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__ContentItemBody",
   componentId: "sc-18m1qie-2"
-})(["background-color:red;height:80%;width:100%;"]);
+})(["height:calc(100% - 100px);width:100%;overflow:auto;"]);
 
 /***/ }),
 
@@ -103,9 +103,9 @@ var AppFooter = function AppFooter() {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4,
-      columnNumber: 13
+      columnNumber: 10
     }
-  }, "Made By GI");
+  }, "Made By GeonilJang");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AppFooter);
@@ -127,7 +127,7 @@ __webpack_require__.r(__webpack_exports__);
 var FooterBlock = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].footer.withConfig({
   displayName: "styles__FooterBlock",
   componentId: "qbn37k-0"
-})(["width:100%;height:50px;background-color:darkgreen;"]);
+})(["width:100%;height:50px;text-align:center;line-height:50px;color:white;background-color:gray;"]);
 
 /***/ }),
 
@@ -157,35 +157,43 @@ var AppHeader = function AppHeader() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 12,
       columnNumber: 5
     }
   }, __jsx(_styles__WEBPACK_IMPORTED_MODULE_1__["HeaderSection"], {
+    flex: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 13,
       columnNumber: 7
     }
-  }, __jsx(_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(_styles__WEBPACK_IMPORTED_MODULE_1__["HeaderHalfSection"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 14,
       columnNumber: 9
     }
-  })), __jsx(_styles__WEBPACK_IMPORTED_MODULE_1__["HeaderSection"], {
+  }, "1"), __jsx(_styles__WEBPACK_IMPORTED_MODULE_1__["HeaderHalfSection"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 15,
+      columnNumber: 9
+    }
+  }, "2")), __jsx(_styles__WEBPACK_IMPORTED_MODULE_1__["HeaderSection"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
       columnNumber: 7
     }
   }, __jsx(_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 18,
       columnNumber: 9
     }
   })));
@@ -199,13 +207,16 @@ var AppHeader = function AppHeader() {
 /*!***********************************************!*\
   !*** ./components/AppLayout/Header/styles.js ***!
   \***********************************************/
-/*! exports provided: HeaderBlock, HeaderSection */
+/*! exports provided: HeaderBlock, HeaderSection, HeaderHalfSection, HeaderLogo, HeaderMenu */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderBlock", function() { return HeaderBlock; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderSection", function() { return HeaderSection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderHalfSection", function() { return HeaderHalfSection; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderLogo", function() { return HeaderLogo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderMenu", function() { return HeaderMenu; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 var HeaderBlock = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
@@ -215,7 +226,21 @@ var HeaderBlock = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.
 var HeaderSection = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__HeaderSection",
   componentId: "nek2er-1"
-})(["width:100%;height:50px;"]);
+})(["width:100%;height:50px;background-color:goldenrod;display:", ";"], function (props) {
+  return props.flex && 'flex';
+});
+var HeaderHalfSection = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__HeaderHalfSection",
+  componentId: "nek2er-2"
+})(["width:50%;height:50px;background-color:cadetblue;display:flex;"]);
+var HeaderLogo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__HeaderLogo",
+  componentId: "nek2er-3"
+})([""]);
+var HeaderMenu = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__HeaderMenu",
+  componentId: "nek2er-4"
+})([""]);
 
 /***/ }),
 
@@ -241,43 +266,43 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var navItem = [{
-  mainMenu: "아이템1",
+  mainMenu: '아이템1',
   subMenu: [{
-    name: "product",
-    path: "product"
+    name: 'product',
+    path: 'product'
   }, {
-    name: "상품1",
-    path: "#"
+    name: '상품1',
+    path: '/'
   }]
 }, {
-  mainMenu: "아이템2",
+  mainMenu: '아이템2',
   subMenu: [{
-    name: "상품2-1",
-    path: "#"
+    name: '상품2-1',
+    path: '#'
   }, {
-    name: "상품2-2",
-    path: "#"
+    name: '상품2-2',
+    path: '#'
   }]
 }, {
-  mainMenu: "아이템3",
+  mainMenu: '아이템3',
   subMenu: [{
-    name: "상품3",
-    path: "#"
+    name: '상품3',
+    path: '#'
   }, {
-    name: "상품3-1",
-    path: "#"
+    name: '상품3-1',
+    path: '#'
   }]
 }, {
-  mainMenu: "아이템4",
+  mainMenu: '아이템4',
   subMenu: [{
-    name: "상품4",
-    path: "#"
+    name: '상품4',
+    path: '#'
   }, {
-    name: "상품4-1",
-    path: "#"
+    name: '상품4-1',
+    path: '#'
   }, {
-    name: "상품5-1",
-    path: "#"
+    name: '상품5-1',
+    path: '#'
   }]
 }];
 
@@ -286,8 +311,8 @@ var Nav = function Nav() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
-      columnNumber: 9
+      lineNumber: 73,
+      columnNumber: 5
     }
   }, navItem.map(function (item) {
     return __jsx(_styles__WEBPACK_IMPORTED_MODULE_2__["NavListItem"], {
@@ -295,22 +320,22 @@ var Nav = function Nav() {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70,
-        columnNumber: 21
+        lineNumber: 75,
+        columnNumber: 9
       }
     }, __jsx(_styles__WEBPACK_IMPORTED_MODULE_2__["NavListItemMenu"], {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71,
-        columnNumber: 25
+        lineNumber: 76,
+        columnNumber: 11
       }
     }, item.mainMenu, __jsx(_styles__WEBPACK_IMPORTED_MODULE_2__["NavListItemMenuItem"], {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72,
-        columnNumber: 29
+        lineNumber: 78,
+        columnNumber: 13
       }
     }, item.subMenu.map(function (sub) {
       return __jsx(_styles__WEBPACK_IMPORTED_MODULE_2__["NavListItemMenuItemMenu"], {
@@ -318,23 +343,23 @@ var Nav = function Nav() {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74,
-          columnNumber: 37
+          lineNumber: 80,
+          columnNumber: 17
         }
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
         href: sub.path,
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75,
-          columnNumber: 41
+          lineNumber: 81,
+          columnNumber: 19
         }
       }, __jsx("a", {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75,
-          columnNumber: 63
+          lineNumber: 82,
+          columnNumber: 21
         }
       }, sub.name)));
     }))));
